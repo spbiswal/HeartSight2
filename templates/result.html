@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(/static/wall1.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 50px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #666;
+        }
+        .positive {
+            color: #dc3545; /* Red color for positive prediction */
+        }
+        .negative {
+            color: #28a745; /* Green color for negative prediction */
+        }
+        a {
+            text-decoration: none;
+            color: #f1d1b5;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #f18c8e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        {% if prediction == 1 %}
+            <p class="positive">Based on the input data, the person is diagnosed with heart disease.</p>
+        {% else %}
+            <p class="negative">Based on the input data, the person is not diagnosed with heart disease.</p>
+        {% endif %}
+        <br>
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeartSight</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(/static/wall1.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.85);
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            font-size: 36px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 18px;
+            color: #ddd;
+            margin-bottom: 30px;
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            grid-gap: 15px;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        label {
+            font-weight: bold;
+            color: #000;
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #0056b3;
+            transition: background-color 0.3s ease;
+        }
+        .header {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-family: 'Gill Sans MT';
+        }
+        .header h2 {
+            font-family: 'Gill Sans MT';
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 15px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            h2 {
+                font-size: 16px;
+            }
+            .form-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            }
+            .card {
+                padding: 10px;
+            }
+            button {
+                padding: 12px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 14px;
+            }
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>HEARTSIGHT</h1>
+            <h2>Computational Intelligence framework for detection of heart disease</h2>
+        </div>
+        <form action="/predict" method="post" class="form-grid">
+            <div class="card">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" step="any" required>
+            </div>
+
+            <div class="card">
+                <label for="sysBP">Systolic BP</label>
+                <input type="number" id="sysBP" name="sysBP" step="any" required>
+            </div>
+
+            <div class="card">
+                <label for="totChol">Total Cholesterol</label>
+                <input type="number" id="totChol" name="totChol" step="any" required>
+            </div>
+
+            <div class="card">
+                <label for="BMI">Body Mass Index</label>
+                <input type="number" id="BMI" name="BMI" step="any" required>
+            </div>
+
+            <div class="card">
+                <label for="heartRate">Heart Rate</label>
+                <input type="number" id="heartRate" name="heartRate" step="any" required>
+            </div>
+
+            <div class="card">
+                <label for="glucose">Glucose Level</label>
+                <input type="number" id="glucose" name="glucose" step="any" required>
+            </div>
+
+            <div class="card">
+                <label for="BPMeds">BP Medication</label>
+                <select id="BPMeds" name="BPMeds" required>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+
+            <div class="card">
+                <label for="diabetes">Diabetes</label>
+                <select id="diabetes" name="diabetes" required>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+
+            <div class="card">
+                <label for="prevalentStroke">Prevalent Stroke</label>
+                <select id="prevalentStroke" name="prevalentStroke" required>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>

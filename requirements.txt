@@ -1,0 +1,10 @@
+pandas
+numpy
+skrebate
+matplotlib
+scikit-learn
+tabulate
+pickle
+imblearn
+Flask
+Gunicorn
