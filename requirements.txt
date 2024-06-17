@@ -4,7 +4,6 @@ skrebate
 matplotlib
 scikit-learn
 tabulate
-pickle
 imblearn
 Flask
 Gunicorn
