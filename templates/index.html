@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HeartSight</title>
+    <title>HeartSight2</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -137,23 +137,13 @@
         </div>
         <form action="/predict" method="post" class="form-grid">
             <div class="card">
-                <label for="age">Age</label>
-                <input type="number" id="age" name="age" step="any" required>
-            </div>
-
-            <div class="card">
-                <label for="sysBP">Systolic BP</label>
-                <input type="number" id="sysBP" name="sysBP" step="any" required>
+                <label for="BMI">Body Mass Index</label>
+                <input type="number" id="BMI" name="BMI" step="any" required>
             </div>
 
             <div class="card">
                 <label for="totChol">Total Cholesterol</label>
                 <input type="number" id="totChol" name="totChol" step="any" required>
-            </div>
-
-            <div class="card">
-                <label for="BMI">Body Mass Index</label>
-                <input type="number" id="BMI" name="BMI" step="any" required>
             </div>
 
             <div class="card">
@@ -167,6 +157,11 @@
             </div>
 
             <div class="card">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" step="any" required>
+            </div>
+
+            <div class="card">
                 <label for="BPMeds">BP Medication</label>
                 <select id="BPMeds" name="BPMeds" required>
                     <option value="0">No</option>
@@ -175,16 +170,21 @@
             </div>
 
             <div class="card">
-                <label for="diabetes">Diabetes</label>
-                <select id="diabetes" name="diabetes" required>
+                <label for="sysBP">Systolic BP</label>
+                <input type="number" id="sysBP" name="sysBP" step="any" required>
+            </div>
+
+            <div class="card">
+                <label for="prevalentStroke">Prevalent Stroke</label>
+                <select id="prevalentStroke" name="prevalentStroke" required>
                     <option value="0">No</option>
                     <option value="1">Yes</option>
                 </select>
             </div>
 
             <div class="card">
-                <label for="prevalentStroke">Prevalent Stroke</label>
-                <select id="prevalentStroke" name="prevalentStroke" required>
+                <label for="diabetes">Diabetes</label>
+                <select id="diabetes" name="diabetes" required>
                     <option value="0">No</option>
                     <option value="1">Yes</option>
                 </select>

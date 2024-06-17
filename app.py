@@ -47,5 +47,5 @@ def predict_user_input(model, user_input_dict):
     prediction = model.predict(user_input_df)
     return prediction[0]
 
-#if __name__ == '__main__':
- #   app.run(debug=True)
+if __name__ == '__main__':
+   app.run(debug=True)
